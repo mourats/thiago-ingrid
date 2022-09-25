@@ -1,0 +1,50 @@
+/* https://mateusqc.github.io/wedding/ */
+
+@font-face {
+  font-family: "Cinzel";
+  src: url("/fonts/cinzel/cinzel-regular-webfont.eot");
+  src: url("/fonts/cinzel/cinzel-regular-webfont.woff") format("woff"),
+    url("/fonts/cinzel/cinzel-regular-webfont.svg") format("svg");
+  src: url("https://mateusqc.github.io/wedding/fonts/cinzel/cinzel-regular-webfont.eot");
+  src: url("https://mateusqc.github.io/wedding/fonts/cinzel/cinzel-regular-webfont.woff")
+      format("woff"),
+    url("https://mateusqc.github.io/wedding/fonts/cinzel/cinzel-regular-webfont.svg")
+      format("svg");
+  src: url("https://mateusfernanda.me/fonts/cinzel/cinzel-regular-webfont.eot");
+  src: url("https://mateusfernanda.me/fonts/cinzel/cinzel-regular-webfont.woff")
+      format("woff"),
+    url("https://mateusfernanda.me/fonts/cinzel/cinzel-regular-webfont.svg")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Shell Line";
+  src: url("/fonts/shellline/shelline-webfont.eot");
+  src: url("/fonts/shellline/shelline-webfont.woff") format("woff"),
+    url("/fonts/shellline/shelline-webfont.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Fournier";
+  src: url("/fonts/fournier/FournierMTStdItalic.woff") format("woff");
+  src: url("https://mateusqc.github.io/wedding/fonts/fournier/FournierMTStdItalic.woff")
+    format("woff");
+  src: url("https://mateusfernanda.me/fonts/fournier/FournierMTStdItalic.woff")
+    format("woff");
+}
+
+.use-cinzel {
+  font-family: "Cinzel";
+}
+
+.use-shellline {
+  font-family: "Shell Line";
+}
+
+.use-fournier {
+  font-family: "Fournier";
+}
+
+.title-letter-spacing {
+  letter-spacing: 10px;
+}
