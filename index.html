@@ -274,7 +274,6 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h3>Confirme sua presença</h3>
-                <p>Confirme sua presença para receber o QRCode de acesso.</p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
@@ -291,25 +290,6 @@
                             <div class="form-input-group">
                                 <i class="fa fa-phone"></i><input type="number" name="phone" class=""
                                                                 placeholder="Número de telefone"
-                                                                required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="form-input-group">
-                                <i class="fa fa-envelope"></i><input type="email" name="email" class=""
-                                                                     placeholder="Seu e-mail"
-                                                                     required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Código de convite"
                                                                 required>
                             </div>
                         </div>
@@ -369,7 +349,7 @@
     if (btnList.length === 1) {
         btnList[0].addEventListener('click', function () {
             elem = document.createElement('textarea');
-            elem.value = '83996233260';
+            elem.value = '83981037238';
             document.body.appendChild(elem);
             elem.select();
             document.execCommand('copy');

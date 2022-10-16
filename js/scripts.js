@@ -253,38 +253,29 @@ $(document).ready(function () {
         "<strong>Só um segundo!</strong> Estamos verificando suas informações..."
       )
     );
-
-    if (MD5($("#invite_code").val()) !== "3466cc6066c989d5e2ca61e01f263c0e") {
-      $("#alert-wrapper").html(
-        alert_markup(
-          "danger",
-          "<strong>Erro!</strong> Código de convite inválido."
-        )
-      );
-    } else {
-      $.post(
-        "https://script.google.com/macros/s/AKfycbzJJ5OyTqwN7puh2lAuC7upL_WCGCFPp54yucxd4jZecTsdDnJNt6Z3JS4sDg1KSH3NwA/exec",
-        data
-      )
-        .done(function (data) {
-          console.log(data);
-          if (data.result === "error") {
-            $("#alert-wrapper").html(alert_markup("danger", data.message));
-          } else {
-            $("#alert-wrapper").html("");
-            $("#rsvp-modal").modal("show");
-          }
-        })
-        .fail(function (data) {
-          console.log(data);
-          $("#alert-wrapper").html(
-            alert_markup(
-              "danger",
-              "<strong>Erro!</strong> Há algum problema com o servidor."
-            )
-          );
-        });
-    }
+    data['invite_code']='271117';
+    $.post(
+      "https://script.google.com/macros/s/AKfycbzqICb2LqG6igAH1Pcx8GveiGtiGHN5DVFZ_u803MOtVbe695DBC4oSEMVNSwfXWAIX/exec",
+      data
+    )
+      .done(function (data) {
+        console.log(data);
+        if (data.result === "error") {
+          $("#alert-wrapper").html(alert_markup("danger", data.message));
+        } else {
+          $("#alert-wrapper").html("");
+          $("#rsvp-modal").modal("show");
+        }
+      })
+      .fail(function (data) {
+        console.log(data);
+        $("#alert-wrapper").html(
+          alert_markup(
+            "danger",
+            "<strong>Erro!</strong> Há algum problema com o servidor."
+          )
+        );
+      });
   });
 });
 
