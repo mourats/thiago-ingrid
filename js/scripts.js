@@ -146,8 +146,8 @@ $(document).ready(function () {
   $(function () {
     $("a[href*=#]:not([href=#])").click(function () {
       if (
-        location.pathname.replace(/^\//, "") ===
-          this.pathname.replace(/^\//, "") &&
+        location.pathname?.replace(/^\//, "") ===
+        this.pathname?.replace(/^\//, "") &&
         location.hostname === this.hostname
       ) {
         var target = $(this.hash);
@@ -253,9 +253,9 @@ $(document).ready(function () {
         "<strong>Só um segundo!</strong> Estamos verificando suas informações..."
       )
     );
-    data['invite_code']='271117';
+    data['invite_code'] = '271117';
     $.post(
-      "https://script.google.com/macros/s/AKfycbzqICb2LqG6igAH1Pcx8GveiGtiGHN5DVFZ_u803MOtVbe695DBC4oSEMVNSwfXWAIX/exec",
+      "https://script.google.com/macros/s/AKfycbzKPnXn33A1Z7uTlD4IJ6uEkAXr6lPdWxacrmIAggIbu5IAOnu40w9Vapy4_jSJl2TE/exec",
       data
     )
       .done(function (data) {
@@ -426,24 +426,24 @@ var MD5 = function (string) {
   }
 
   function Utf8Encode(string) {
-    string = string.replace(/\r\n/g, "\n");
+    string = string?.replace(/\r\n/g, "\n");
     var utftext = "";
+    if (string) {
+      for (var n = 0; n < string.length; n++) {
+        var c = string.charCodeAt(n);
 
-    for (var n = 0; n < string.length; n++) {
-      var c = string.charCodeAt(n);
-
-      if (c < 128) {
-        utftext += String.fromCharCode(c);
-      } else if (c > 127 && c < 2048) {
-        utftext += String.fromCharCode((c >> 6) | 192);
-        utftext += String.fromCharCode((c & 63) | 128);
-      } else {
-        utftext += String.fromCharCode((c >> 12) | 224);
-        utftext += String.fromCharCode(((c >> 6) & 63) | 128);
-        utftext += String.fromCharCode((c & 63) | 128);
+        if (c < 128) {
+          utftext += String.fromCharCode(c);
+        } else if (c > 127 && c < 2048) {
+          utftext += String.fromCharCode((c >> 6) | 192);
+          utftext += String.fromCharCode((c & 63) | 128);
+        } else {
+          utftext += String.fromCharCode((c >> 12) | 224);
+          utftext += String.fromCharCode(((c >> 6) & 63) | 128);
+          utftext += String.fromCharCode((c & 63) | 128);
+        }
       }
     }
-
     return utftext;
   }
 
